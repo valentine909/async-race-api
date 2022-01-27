@@ -13,7 +13,7 @@ const db = {
             "id": 2,
         },
         {
-            "name": "Mersedes",
+            "name": "Merсedes",
             "color": "#6c779f",
             "id": 3,
         },
@@ -89,7 +89,7 @@ server.patch('/engine', (req, res) => {
             delete state.blocked[id];
         }
 
-        setTimeout(() => res.header('Content-Type', 'application/json').status(200).send(JSON.stringify({ velocity, distance })), x);
+        res.header('Content-Type', 'application/json').status(200).send(JSON.stringify({ velocity, distance }));
     }
 });
 
